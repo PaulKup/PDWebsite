@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = Object.fromEntries(formData);
             
             // Basic validation
-            if (!data.name || !data.email || !data.message) {
+            if (!data.name || !data.email) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
