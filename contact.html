@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Web Design - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">PD Web Design</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us to discuss your project and start creating something amazing together</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Let's Start a Conversation</h2>
+                        <p>Ready to bring your vision to life? We'd love to hear about your project and discuss how we can help you achieve your goals.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-details">
+                                    <h3>Email Us</h3>
+                                    <p>pdwebdev.studio@gmail.com</p>
+                                    <p>We typically respond within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📞</div>
+                                <div class="method-details">
+                                    <h3>Call Us</h3>
+                                    <p>(555) 123-4567</p>
+                                    <p>Monday - Friday, 9AM - 6PM EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📍</div>
+                                <div class="method-details">
+                                    <h3>Visit Us</h3>
+                                    <p>123 Web Design Street</p>
+                                    <p>Digital City, DC 12345</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h3>Send us a Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="website-design">Website Design</option>
+                                    <option value="ecommerce">E-commerce Solutions</option>
+                                    <option value="web-applications">Web Applications</option>
+                                    <option value="maintenance">Website Maintenance</option>
+                                    <option value="seo-marketing">SEO & Marketing</option>
+                                    <option value="brand-identity">Brand Identity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Project Budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-1000">Under $1,000</option>
+                                    <option value="1000-5000">$1,000 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="over-10000">Over $10,000</option>
+                                    <option value="not-sure">Not sure yet</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" value="yes">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for web design tips and updates
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How long does it take to build a website?</h3>
+                        <p>Project timelines vary depending on complexity. A simple 5-page website typically takes 2-3 weeks, while more complex projects can take 6-8 weeks or longer.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you provide ongoing support?</h3>
+                        <p>Yes! We offer various maintenance packages to keep your website secure, updated, and performing optimally. We also provide training and documentation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can you redesign my existing website?</h3>
+                        <p>Absolutely! We can redesign and modernize your existing website while preserving your content and improving functionality and user experience.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you work with clients remotely?</h3>
+                        <p>Yes, we work with clients worldwide. We use video calls, screen sharing, and project management tools to ensure smooth collaboration regardless of location.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PD Web Design</h3>
+                    <p>Creating digital experiences that matter.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: pdwebdev.studio@gmail.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PD Web Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
