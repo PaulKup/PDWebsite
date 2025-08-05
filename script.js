@@ -134,27 +134,8 @@ function isValidEmail(email) {
 
 // Send contact email function
 async function sendContactEmail(data) {
-    // For now, simulate successful email sending
-    // This will show success message and log the form data
-    console.log('Contact form submission:', data);
-    
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // In a real implementation, you would send this data to your email service
-    // For now, we'll just return success
-    return { success: true, message: 'Email sent successfully' };
-    
-    // TODO: Replace the above with one of these working solutions:
-    
-    // Option 1: Formspree (recommended for static sites)
-    // 1. Go to https://formspree.io and create a free account
-    // 2. Create a new form and get your form ID
-    // 3. Replace 'your-form-id' below with your actual form ID
-    /*
-    const formspreeUrl = 'https://formspree.io/f/your-actual-form-id';
-    
-    const response = await fetch(formspreeUrl, {
+    // Send to Express backend
+    const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -164,50 +145,21 @@ async function sendContactEmail(data) {
             email: data.email,
             phone: data.phone || '',
             company: data.company || '',
+            website: data.website || '',
             service: data.service || '',
             budget: data.budget || '',
             message: data.message,
-            newsletter: data.newsletter === 'yes',
-            _replyto: 'pdwebdev.studio@gmail.com'
+            newsletter: data.newsletter === 'yes'
         })
     });
     
+    const result = await response.json();
+    
     if (!response.ok) {
-        throw new Error('Failed to send email');
+        throw new Error(result.message || 'Failed to send email');
     }
     
-    return response;
-    */
-    
-    // Option 2: EmailJS (client-side email service)
-    // 1. Go to https://emailjs.com and create a free account
-    // 2. Set up your email service and template
-    // 3. Add EmailJS SDK to your HTML: <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    // 4. Initialize EmailJS and replace the service/template IDs below
-    /*
-    if (typeof emailjs !== 'undefined') {
-        return emailjs.send(
-            'your-service-id',
-            'your-template-id',
-            {
-                to_email: 'pdwebdev.studio@gmail.com',
-                from_name: data.name,
-                from_email: data.email,
-                from_phone: data.phone || 'Not provided',
-                from_company: data.company || 'Not provided',
-                service: data.service || 'Not specified',
-                budget: data.budget || 'Not specified',
-                message: data.message,
-                newsletter: data.newsletter === 'yes' ? 'Yes' : 'No'
-            }
-        );
-    }
-    */
-    
-    // Option 3: Netlify Forms (if hosting on Netlify)
-    // 1. Add data-netlify="true" to your form
-    // 2. Netlify will automatically handle form submissions
-    // 3. You can set up email notifications in Netlify dashboard
+    return result;
 }
 
 // Notification system
