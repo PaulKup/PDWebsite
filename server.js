@@ -112,7 +112,7 @@ pdwebdev.studio@gmail.com
         // Send email to P&D Web Design
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: 'kupiszewskist1@gmail.com',
+            to: 'pdwebdev.studio@gmail.com',
             subject: 'New Contact Form Submission - P&D Web Design',
             text: emailContent,
             html: emailContent.replace(/\n/g, '<br>')
