@@ -80,10 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
             navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
         }
     });
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.feature-card, .service-card, .pricing-card, .value-card, .team-member, .faq-item').forEach(el => {
+    document.querySelectorAll('.feature-card, .service-card, .pricing-card, .value-card, .team-member, .faq-item, .cta').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -143,12 +141,9 @@ async function sendContactEmail(data) {
         body: JSON.stringify({
             name: data.name,
             email: data.email,
-            phone: data.phone || '',
             company: data.company || '',
             website: data.website || '',
-            service: data.service || '',
-            budget: data.budget || '',
-            message: data.message,
+            message: data.message || '',
             newsletter: data.newsletter === 'yes'
         })
     });

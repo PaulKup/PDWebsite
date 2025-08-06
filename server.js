@@ -49,7 +49,7 @@ const createTransporter = () => {
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
     try {
-        const { name, email, phone, company, service, budget, message, newsletter } = req.body;
+        const { name, email, company, message, newsletter } = req.body;
 
         // Validation
         if (!name || !email) {
@@ -77,11 +77,8 @@ New Contact Form Submission - P&D Web Design
 
 Name: ${name}
 Email: ${email}
-Phone: ${phone || 'Not provided'}
 Company: ${company || 'Not provided'}
 Website: ${req.body.website || 'Not provided'}
-Service Interested In: ${service || 'Not specified'}
-Budget Range: ${budget || 'Not specified'}
 Newsletter Subscription: ${newsletter === 'yes' ? 'Yes' : 'No'}
 
 Message:

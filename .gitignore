@@ -93,6 +93,7 @@ error_log
 
 # Upload directories (if any)
 uploads/
+styleGuide/
 
 # Node.js
 node_modules/
